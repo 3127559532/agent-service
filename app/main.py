@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
+from app.modules.product.router import router as product_router
 from app.core.config import settings
 from app.core.logging import configure_logging, get_logger
 from contextlib import asynccontextmanager
@@ -33,6 +33,8 @@ async def health_check() -> dict[str, str]:
     logger.info("执行健康检查")
     return {"status": "ok"}
 
+# 创建 app 后注册路由
+app.include_router(product_router)
 
 if __name__ == "__main__":
     uvicorn.run(
