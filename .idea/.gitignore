@@ -1,0 +1,42 @@
+# --- 环境与虚拟环境 ---
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# --- Python 编译产物 ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# --- 测试与覆盖率 ---
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- 构建与打包 ---
+build/
+dist/
+*.egg-info/
+
+# --- IDE 与编辑器配置 ---
+# PyCharm / IntelliJ IDEA
+.idea/
+*.iml
+# VS Code
+.vscode/
+# macOS (如果你用 Mac)
+.DS_Store
+
+# --- uv 特有缓存 ---
+# uv 通常使用全局缓存，但为了以防万一
+.uv/
+
+# --- 日志与本地数据库 ---
+*.log
+*.sqlite3
+*.db
